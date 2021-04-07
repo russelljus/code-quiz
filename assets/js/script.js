@@ -12,6 +12,8 @@ var initialsElement = document.getElementById("initials");
 var feedbackElement = document.getElementById("feedback");
 var endingScreen = document.getElementById("end-screen")
 var finalScore = document.getElementById("final-score")
+var highscoreDisplayName = document.getElementById("highscores");
+var unHideScores = document.getElementById("hidescores")
 // Add question array here
 
 var questions = [
@@ -118,6 +120,7 @@ function endQuiz(){
     endingScreen.removeAttribute("class")
     questionsElement.setAttribute("class","hide")
     finalScore.textContent = time
+    // showHighScores()
 }
 // function to save high scores 
 function highScores(){
@@ -126,12 +129,28 @@ function highScores(){
    var addScore = {
        score: time, 
        name: userInitals,
-    
+      
    }
 highScores.push(addScore)
 window.localStorage.setItem("High Scores",JSON.stringify(highScores))
+showHighScores()
 }
-
+function showHighScores(){
+    var grabScores = JSON.parse(window.localStorage.getItem("High Scores")) ||[]
+    grabScores.sort(function(a, b) {
+      return b.score - a.score;
+    });
+    grabScores.forEach(function(score){
+      var listItem = document.createElement("li");
+      listItem.textContent = score.name + " - " + score.score;
+       // show in highscores section
+       var list = document.getElementById("highscores");
+       highscoreDisplayName.appendChild(listItem);
+     }); 
+     unHideScores.removeAttribute("class")   
+    }
+    
 // click events that link buttons with above functions 
 startBtnElement.onclick = QuizStart
 submitBtn.onclick = highScores
+
