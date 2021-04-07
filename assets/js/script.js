@@ -117,10 +117,21 @@ function endQuiz(){
     clearInterval(timerId)
     endingScreen.removeAttribute("class")
     questionsElement.setAttribute("class","hide")
-    
+    finalScore.textContent = time
 }
 // function to save high scores 
-
+function highScores(){
+   var userInitals = initialsElement.value
+   var highScores = JSON.parse(window.localStorage.getItem("High Scores")) ||[]
+   var addScore = {
+       score: time, 
+       name: userInitals,
+    
+   }
+highScores.push(addScore)
+window.localStorage.setItem("High Scores",JSON.stringify(highScores))
+}
 
 // click events that link buttons with above functions 
 startBtnElement.onclick = QuizStart
+submitBtn.onclick = highScores
