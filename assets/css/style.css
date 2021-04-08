@@ -2,3 +2,15 @@
     display: none;
     
 }
+
+h1 {
+    background-color: lightblue;
+    text-align: center;
+    box-shadow: 5px 10px 15px black;
+    border-radius: 5px;
+}   
+
+body {
+    background-color: rgb(144, 238, 213);
+    
+}
