@@ -1,8 +1,8 @@
-
-var questionIndex = 0;  // question indexes that may keep track quiz state and time 
+// question indexes that may keep track of quiz state and time 
+var questionIndex = 0;  
 
 var timerId;
-// Golbal variable that connect our js functions with our Html classes & Ids
+// Golbal variable that connect our functions with our Html classes & Ids
 var questionsElement = document.getElementById("questions");
 var timerElement = document.getElementById("time");
 var choicesElement= document.getElementById("options");
@@ -34,12 +34,12 @@ var questions = [
     },
     {
       title: "Does JavaScript depend on case sensitive language",
-      options: ["Yes", "No", "Only on Tuesdays", "Definitely not"],
+      options: ["Yes", "No", "Sometimes", "Definitely not"],
       answer: "Yes"
     },
     {
       title: "Which came first, JavaScript or Java?",
-      options: ["Discovering water on Mars", "Java", "The chicken", "JavaScript"],
+      options: ["The egg", "Java", "The chicken", "JavaScript"],
       answer: "Java"
     },
     {
