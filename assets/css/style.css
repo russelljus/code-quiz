@@ -14,3 +14,10 @@ body {
     background-color: rgb(144, 238, 213);
     
 }
+
+img {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto 
+}
+    
