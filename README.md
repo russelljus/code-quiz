@@ -12,6 +12,6 @@
 
 <h2>Deployed links:</h2>
 
-
+https://russelljus.github.io/code-quiz/
 
 https://github.com/russelljus/code-quiz
