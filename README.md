@@ -1,3 +1,4 @@
+
 <h1>JavaScript Code Quiz</h1>
 
 <h2> User Story:</h2>
@@ -5,3 +6,5 @@
 
 
 <h2> My work:</h2>
+
+<img width="1440" alt="Screen Shot 2021-04-10 at 9 37 51 PM" src="https://user-images.githubusercontent.com/79387241/114291510-28a11b80-9a45-11eb-90a8-fde94cc9e5da.png">
